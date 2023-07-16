@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Belleza&family=Mulish:wght@200;300;400;500&display=swap");
+:root {
+  --order-color: #f9f9f9;
+}
+
+html {
+  font-size: 15px;
+}
+* {
+  /* background-color: antiquewhite; */
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+  text-transform: uppercase;
+}
+
+/* Bootstrap start */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* XLarge */
+@media (min-width: 1440px) {
+  .container {
+    width: 1370px;
+  }
+}
+/* Bootstrap end */
+form button{
+    border: none;
+    background-color: transparent;
+}
+.floating-icons {
+  position: absolute;
+  right: 40px;
+  top: 36px;
+  font-size: 1.5em;
+}
+.floating-icons i {
+  margin-right: 1.2em;
+}
+
+.shopping-bag {
+  padding: 1em 0;
+}
+.shopping-bag .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.shopping-bag .heading {
+  align-self: center;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  letter-spacing: 0.1em;
+  opacity: 0.8;
+}
+
+.shopping-bag .bag-actions {
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+}
+.btn {
+  border-radius: 5px;
+  padding: 0.9em 1.5em;
+  font-size: 0.87em;
+  letter-spacing: 0.15em;
+}
+
+.secondary-btn {
+  border: 1px solid #86868645;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.secondary-btn:hover {
+  border: 1px solid #fff;
+}
+.main-btn {
+  background-color: black;
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.main-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+
+.bag-actions .bag-tabs {
+  display: flex;
+}
+.bag-actions .bag-tabs .tab {
+  text-transform: initial;
+  height: 25px;
+  margin-right: 1.4em;
+  cursor: pointer;
+}
+.bag-actions .bag-tabs .tab.active {
+  border-bottom: 2px solid #1313139a;
+}
+
+.bag {
+  display: grid;
+  padding: 1em 0;
+  margin-top: 1em;
+  border-top: 1px solid rgb(0 0 0 / 8%);
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1em;
+}
+.bag-items {
+  grid-column: span 8;
+}
+.bag-item {
+  display: flex;
+  margin-bottom: 1em;
+  transition: 0.3s;
+  position: relative;
+}
+.product-img {
+    border-radius: 15px;
+    overflow: hidden;
+    width:200px;
+    height: 300px;
+}
+.product-img img {
+    width: 300px;
+    transition: 0.3s;
+}
+.product-img img:hover {
+  transform: scale(1.07);
+}
+.product-desc {
+  padding: 1em 1.5em;
+}
+.product-desc div {
+  margin-bottom: 0.4em;
+}
+.product-desc .product-name {
+  font-size: 1.3em;
+  letter-spacing: 0.05em;
+}
+.product-desc .product-name,
+.product-desc .product-size {
+  font-weight: bold;
+}
+.product-desc .product-code,
+.product-desc .product-price {
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+.product-desc .product-size {
+  text-transform: initial;
+  font-size: 0.9em;
+  margin-top: 2em;
+}
+
+.product-desc .actions {
+  display: flex;
+}
+.product-desc .actions .action {
+  margin-right: 2em;
+  text-transform: initial;
+  margin-top: 4em;
+  font-weight: bold;
+  opacity: 0.6;
+  display: flex;
+  align-items: center;
+}
+.product-desc .actions .action i {
+  font-size: 1.2em;
+  margin-right: 0.4em;
+}
+.bag-item .remove {
+  cursor: pointer;
+  position: absolute;
+  top: 0.7em;
+  right: 1em;
+  font-size: 1.3em;
+  opacity: 0;
+  transition: 0.3s;
+}
+.bag-item:hover .remove {
+  opacity: 0.4;
+}
+
+.order-summary {
+    padding: 1.2em;
+
+    background-color: var(--order-color);
+  height: fit-content;
+  margin-top: 1.5em;
+    grid-row: 1;
+    grid-column: 9 / span 4;
+}
+.order-summary .header {
+  font-size: 1.3em;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  margin-bottom: 1em;
+}
+.order-summary .checkout {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.order-summary .btn a{
+    text-decoration: none;
+    color: white;
+}
+.order-summary .checkout.total-price .item,
+.order-summary .checkout.total-price .price {
+  color: rgb(0, 0, 0);
+}
+.order-summary .checkout .item,
+.order-summary .checkout .price {
+  text-transform: initial;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.order-summary .main-btn {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 3em;
+  margin-top: 1em;
+}
+.payment-method {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.payment-method .py {
+  text-transform: initial;
+  font-weight: bold;
+}
+footer {
+  background-color: #f8f8f9;
+  padding: 8em 0;
+}
+
+
+/* Style end */

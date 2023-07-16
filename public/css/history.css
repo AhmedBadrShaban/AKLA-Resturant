@@ -1,0 +1,29 @@
+body{
+    background-color: antiquewhite;
+
+}
+.history-cards .card {
+    max-width: 400px;
+}
+
+
+.feedback {
+    padding: 0 2em 2em;
+    width: 100% !important;
+}
+.form-control {
+    width: 100%;
+    border: none;
+    outline: none;
+    box-shadow: 0px 1px 8px -2px rgb(0 0 0 / 10%);
+    padding: 0.5em;
+}
+
+.history-description {
+    padding: 0 2em 1.5em;
+}
+.history-comment {
+    padding: 0.5em !important;
+    width: 100% !important;
+    margin-bottom: 1em;
+}
